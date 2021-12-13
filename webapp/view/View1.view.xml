@@ -1,0 +1,28 @@
+<mvc:View controllerName="datetimeexp.DateTimeExperimental.controller.View1" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>title}">
+					<content>
+						<VBox>
+							<DateTimePicker id="dateTimePicker1" placeholder="Enter Start Date"/>
+							<DateTimePicker id="dateTimePicker2" placeholder="Enter End Date"/>
+							<Input id="inpPeriod" placeholder="How often the task is done" type="Number"/>
+							<Select id="selDayorWeek">
+								<items>
+									<core:Item key="Hourly" text="Hourly"/>
+									<core:Item key="Daily" text="Daily"/>
+									<core:Item key="Weekly" text="Weekly"/>
+									<core:Item key="Monthly" text="Monthly"/>
+								</items>
+							</Select>
+							<Button id="buttonUpdate" text="Calculate Cron" press="updateTextField"/>
+							<Text id="textField" text="Press the button!"/>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
